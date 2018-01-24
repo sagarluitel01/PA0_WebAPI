@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+           targetNamespace="http://sample"
+           xmlns="http://sample"
+           elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Movies" type="MovieType"/>
+	<xs:complexType name="MovieType">
+    	<xs:element type="xs:string" name="Title"/>
+    	<xs:element type="Year" name="Year"/>
+    	<xs:element name="Genre">
+    		<xs:simpleType>
+              	<xs:restriction base="xs:string">
+	                <xs:enumeration value="Action" />
+	                <xs:enumeration value="Adventure" />
+	                <xs:enumeration value="Comedy" />
+	                <xs:enumeration value="Drama" />
+	                <xs:enumeration value="Fantasy" />
+	                <xs:enumeration value="Horror" />
+	                <xs:enumeration value="Mystery" />
+	                <xs:enumeration value="Thriller" />
+	                <xs:enumeration value="Western" />
+              	</xs:restriction>
+          	</xs:simpleType>
+      	</xs:element>
+      	<xs:element name="Actors" type="ActorType"/>
+      	<xs:complexType name="ActorType">
+      		<xs:element type="Name" name="Name"/>
+      		<xs:element type="Birthdate" name="DateOfBirth"/>
+      	</xs:complexType>
+    </xs:complexType>
+    <xs:simpleType name="Year">
+    	<xs:restriction base="xs:integer">
+     		<xs:pattern value="[1-2]\d\d\d"/>
+    	</xs:restriction>
+  	</xs:simpleType>
+  	<xs:simpleType name="Name">
+   		<xs:restriction base="xs:string">
+      		<xs:pattern value="[W]+ +[W]"/>
+    	</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Birthdate">
+   		<xs:restriction base="xs:string">
+      		<xs:pattern value="[0-1]\d/[0-3]\d/[1-2]\d\d\d"/>
+    	</xs:restriction>
+	</xs:simpleType>
