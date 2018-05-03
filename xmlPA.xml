@@ -1,31 +1,17 @@
-
-<?xml version="1.0"?>
 <Movies>
 	<Movie>
 		<Title>Inception</Title>
 		<Year>2010</Year>
 		<Genre>SiFi</Genre>
-		<Actor>
-			<Name>Leonardo DiCaprio</Name>
-			<DateOfBirth>11/11/1974</DateOfBirth>
-		</Actor>
-		<Actor>
-			<Name>Marion Cotillard</Name>
-			<DateOfBirth>09/30/1975</DateOfBirth>
-		</Actor>
-
-		<Title>The Lone Ranger</Title>
-		<Year>2013</Year>
-		<Genre>Action</Genre>
-		<Genre>Adventure</Genre>
-		<Genre>Western</Genre>
-		<Actor>
-			<Name>Johnny Depp</Name>
-			<DateOfBirth>06/09/1963</DateOfBirth>
-		</Actor>
-		<Actor>
-			<Name>Armie Hammer</Name>
-			<DateOfBirth>08/28/1968</DateOfBirth>
-		</Actor>
+		<Actors>
+			<Actor>
+				<Name>Leonardo DiCaprio</Name>
+				<DateOfBirth>11/11/1974</DateOfBirth>
+			</Actor>
+			<Actor>
+				<Name>Marion Cotillard</Name>
+				<DateOfBirth>09/30/1975</DateOfBirth>
+			</Actor>
+		</Actors>
 	</Movie>
 </Movies>
